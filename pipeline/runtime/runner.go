@@ -202,7 +202,10 @@ func (s *Runner) run(ctx context.Context, stage *drone.Stage, data *client.Conte
 
 	// evaluates string replacement expressions and returns an
 	// update configuration file string.
+	log.Debugf("Testtttttt")
+	log.Debug(data.Config.Data)
 	config, err := envsubst.Eval(string(data.Config.Data), subf)
+	log.Debug(config)
 	if err != nil {
 		log.WithError(err).Error("cannot emulate bash substitution")
 		state.FailAll(err)
