@@ -1,4 +1,4 @@
-module github.com/drone/runner-go
+module github.com/Pallavi-code/runner-go-yaml
 
 go 1.12
 
